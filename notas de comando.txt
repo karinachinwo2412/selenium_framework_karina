@@ -1,0 +1,10 @@
+
+el va a hacer todas las dependencias y el build
+
+mvn clean test
+
+para levantar allure
+	mvn allure:serve
+
+para levantar allure reportes	
+mvn allure:serve
