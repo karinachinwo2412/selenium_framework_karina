@@ -36,18 +36,25 @@
             <version>2.13.0</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
-            </plugin>
+        <!--driver manager el se encarga d manipular el browser, para no tener que usar el .exe-->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.4.3</version>
+        </dependency>
+   </dependencies>
 
-            <plugin>
-                <!--correr pruebas donde yo le diga -->
+   <build>
+       <plugins>
+           <plugin>
+               <groupId>io.qameta.allure</groupId>
+               <artifactId>allure-maven</artifactId>
+               <version>2.10.0</version>
+           </plugin>
+
+           <plugin>
+               <!--correr pruebas donde yo le diga -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>

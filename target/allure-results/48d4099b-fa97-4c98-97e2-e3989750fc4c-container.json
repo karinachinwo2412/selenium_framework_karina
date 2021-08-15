@@ -1,0 +1,1 @@
+{"uuid":"48d4099b-fa97-4c98-97e2-e3989750fc4c","name":"selenium_framework_karina","children":["ba5e6f9a-a8f9-49b8-b378-59063a732fea"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1629069121753,"stop":1629069122350}],"afters":[],"links":[],"start":1629069121528,"stop":1629069129968}
