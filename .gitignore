@@ -1,3 +1,6 @@
+*/target/*
+*/target/**
+
 # Compiled class file
 *.class
 
@@ -36,7 +39,3 @@ build
 out
 .gradletasknamecache
 
-.classpath
-.project
-.settings/
-target/
