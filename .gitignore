@@ -27,7 +27,7 @@ hs_err_pid*
 *.iml
 
 #Allure
-allure-report
+allure-report/*
 .allure
 .gradle
 schema
@@ -35,3 +35,8 @@ build
 /*/allure-results/
 out
 .gradletasknamecache
+
+.classpath
+.project
+.settings/
+target/
