@@ -25,3 +25,13 @@ hs_err_pid*
 # .ignore
 .idea/*
 *.iml
+
+#Allure
+allure-report
+.allure
+.gradle
+schema
+build
+/*/allure-results/
+out
+.gradletasknamecache

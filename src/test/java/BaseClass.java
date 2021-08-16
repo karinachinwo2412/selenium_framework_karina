@@ -27,6 +27,11 @@ public class BaseClass {
     @Parameters({"browser"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String browser){
+
+        //DesiredCapabilities caps = DesiredCapabilities.chrome();
+        //String node = "http://localhost:4444/wd/hub";
+        //driver = new RemoteWebDriver(new URL(node), caps);
+
         //System.out.println("**Esto corre dos veces");
         switch (browser){
             case "firefox":

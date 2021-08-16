@@ -8,3 +8,6 @@ para levantar allure
 
 para levantar allure reportes	
 mvn allure:serve
+
+
+npm install -g webdriver-manager
