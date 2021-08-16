@@ -102,22 +102,22 @@
                     <div class="method-list-content passed suite-Account_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Account_Tests" title="TestAccount" class="method navigator-link" hash-for-method="Test_Login_Successful">Test_Login_Successful</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Account_Tests" title="selenium.TestSearch" class="method navigator-link" hash-for-method="Test_Empty_Results">Test_Empty_Results</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Account_Tests" title="TestAccount" class="method navigator-link" hash-for-method="Test_Login_Successful">Test_Login_Successful</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Account_Tests" title="selenium.TestAccount" class="method navigator-link" hash-for-method="Test_Login_Successful">Test_Login_Successful</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Account_Tests" title="TestAccount" class="method navigator-link" hash-for-method="Test_Login_Unsuccessful">Test_Login_Unsuccessful</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Account_Tests" title="selenium.TestAccount" class="method navigator-link" hash-for-method="Test_Login_Unsuccessful">Test_Login_Unsuccessful</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Account_Tests" title="TestAccount" class="method navigator-link" hash-for-method="Test_Login_Unsuccessful">Test_Login_Unsuccessful</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Account_Tests" title="selenium.TestSearch" class="method navigator-link" hash-for-method="Validate_Search(iphone, 1)">Validate_Search(iphone, 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Account_Tests -->
@@ -135,7 +135,30 @@
           <div class="suite-Account_Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestAccount</span>
+              <span class="class-name">selenium.TestSearch</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Empty_Results">
+                  </a> <!-- Test_Empty_Results -->
+                  <span class="method-name">Test_Empty_Results</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_Search(iphone, 1)">
+                  </a> <!-- Validate_Search(iphone, 1) -->
+                  <span class="method-name">Validate_Search</span>
+                  <span class="parameters">(iphone, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Account_Tests-class-passed -->
+          <div class="suite-Account_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">selenium.TestAccount</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -145,24 +168,6 @@
                   <span class="method-name">Test_Login_Successful</span>
                   <em>
 (Test Login Success)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Test_Login_Successful">
-                  </a> <!-- Test_Login_Successful -->
-                  <span class="method-name">Test_Login_Successful</span>
-                  <em>
-(Test Login Success)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Test_Login_Unsuccessful">
-                  </a> <!-- Test_Login_Unsuccessful -->
-                  <span class="method-name">Test_Login_Unsuccessful</span>
-                  <em>
-(Test Login Not Success)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -189,13 +194,15 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Login Tests - Chrome&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestAccount&quot;/&gt;
+      &lt;class name=&quot;selenium.TestAccount&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login Tests - Chrome --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Search Tests - Firefox&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;searchCriteria&quot; value=&quot;iphone&quot;/&gt;
+    &lt;parameter name=&quot;expectedResult&quot; value=&quot;1&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestAccount&quot;/&gt;
+      &lt;class name=&quot;selenium.TestSearch&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Search Tests - Firefox --&gt;
 &lt;/suite&gt; &lt;!-- Account Tests --&gt;
@@ -240,26 +247,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test_Login_Successful')
-data.setCell(0, 2, 'TestAccount')
-data.setCell(0, 3, 1938);
+data.setCell(0, 1, 'Test_Empty_Results')
+data.setCell(0, 2, 'selenium.TestSearch')
+data.setCell(0, 3, 30589);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Test_Login_Successful')
-data.setCell(1, 2, 'TestAccount')
-data.setCell(1, 3, 1730);
+data.setCell(1, 2, 'selenium.TestAccount')
+data.setCell(1, 3, 1696);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'Test_Login_Unsuccessful')
-data.setCell(2, 2, 'TestAccount')
-data.setCell(2, 3, 1340);
+data.setCell(2, 2, 'selenium.TestAccount')
+data.setCell(2, 3, 1280);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Test_Login_Unsuccessful')
-data.setCell(3, 2, 'TestAccount')
-data.setCell(3, 3, 1272);
+data.setCell(3, 1, 'Validate_Search')
+data.setCell(3, 2, 'selenium.TestSearch')
+data.setCell(3, 3, 738);
 window.suiteTableData['Account_Tests']= { tableData: data, tableDiv: 'times-div-Account_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Account_Tests">
               </div> <!-- times-div-Account_Tests -->
             </div> <!-- times-div -->
@@ -285,70 +292,73 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestAccount</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">selenium.TestAccount</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">76 ms</span>
+                <span class="method-start">70 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Test_Login_Successful</span>
-                <span class="method-start">6606 ms</span>
+                <span class="method-start">7180 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">AfterMethod</span>
-                <span class="method-start">8346 ms</span>
+                <span class="method-start">8888 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">8823 ms</span>
+                <span class="method-start">9293 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Test_Login_Unsuccessful</span>
-                <span class="method-start">10813 ms</span>
+                <span class="method-start">12025 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">AfterMethod</span>
-                <span class="method-start">12095 ms</span>
+                <span class="method-start">13316 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">AfterTest</span>
-                <span class="method-start">12462 ms</span>
+                <span class="method-start">13706 ms</span>
               </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">selenium.TestSearch</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">12486 ms</span>
+                <span class="method-start">13728 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(firefox)</span>
-                <span class="method-start">12487 ms</span>
+                <span class="method-name">beforeMethod(chrome)</span>
+                <span class="method-start">13729 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Test_Login_Successful</span>
-                <span class="method-start">19874 ms</span>
+                <span class="method-name">Test_Empty_Results</span>
+                <span class="method-start">15581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">AfterMethod</span>
-                <span class="method-start">21814 ms</span>
+                <span class="method-start">46171 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(firefox)</span>
-                <span class="method-start">22534 ms</span>
+                <span class="method-name">beforeMethod(chrome)</span>
+                <span class="method-start">46623 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Test_Login_Unsuccessful</span>
-                <span class="method-start">27557 ms</span>
+                <span class="method-name">Validate_Search(iphone, 1)</span>
+                <span class="method-start">48909 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">AfterMethod</span>
-                <span class="method-start">28898 ms</span>
+                <span class="method-start">49649 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">AfterTest</span>
-                <span class="method-start">29754 ms</span>
+                <span class="method-start">50001 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
