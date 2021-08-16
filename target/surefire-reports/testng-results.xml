@@ -1,21 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-15T16:07:08 CST" name="Account Tests" finished-at="2021-08-15T16:07:25 CST" duration-ms="17212">
+  <suite started-at="2021-08-15T20:01:44 CST" name="Account Tests" finished-at="2021-08-15T20:02:14 CST" duration-ms="29765">
     <groups>
     </groups>
-    <test started-at="2021-08-15T16:07:08 CST" name="Login Tests" finished-at="2021-08-15T16:07:25 CST" duration-ms="17212">
+    <test started-at="2021-08-15T20:01:44 CST" name="Login Tests - Chrome" finished-at="2021-08-15T20:01:56 CST" duration-ms="12474">
       <class name="TestAccount">
-        <test-method signature="Test_Login_Successful()[pri:0, instance:TestAccount@68ace111]" started-at="2021-08-15T16:07:08 CST" name="Test_Login_Successful" finished-at="2021-08-15T16:07:18 CST" duration-ms="9928" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:44 CST" name="beforeTest" finished-at="2021-08-15T20:01:44 CST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:44 CST" name="beforeMethod" finished-at="2021-08-15T20:01:50 CST" duration-ms="6350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Test_Login_Successful()[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:51 CST" name="Test_Login_Successful" description="Test Login Success" finished-at="2021-08-15T20:01:52 CST" duration-ms="1730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_Login_Successful -->
-        <test-method signature="Test_Login_Unsuccessful()[pri:0, instance:TestAccount@68ace111]" started-at="2021-08-15T16:07:18 CST" name="Test_Login_Unsuccessful" finished-at="2021-08-15T16:07:25 CST" duration-ms="7031" status="PASS">
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:52 CST" name="AfterMethod" finished-at="2021-08-15T20:01:53 CST" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:53 CST" name="beforeMethod" finished-at="2021-08-15T20:01:55 CST" duration-ms="1988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Test_Login_Unsuccessful()[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:55 CST" name="Test_Login_Unsuccessful" description="Test Login Not Success" finished-at="2021-08-15T20:01:56 CST" duration-ms="1272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_Login_Unsuccessful -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:56 CST" name="AfterMethod" finished-at="2021-08-15T20:01:56 CST" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:TestAccount@6a9287b1]" started-at="2021-08-15T20:01:56 CST" name="AfterTest" finished-at="2021-08-15T20:01:56 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
       </class> <!-- TestAccount -->
-    </test> <!-- Login Tests -->
+    </test> <!-- Login Tests - Chrome -->
+    <test started-at="2021-08-15T20:01:56 CST" name="Search Tests - Firefox" finished-at="2021-08-15T20:02:14 CST" duration-ms="17268">
+      <class name="TestAccount">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:01:56 CST" name="beforeTest" finished-at="2021-08-15T20:01:56 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:01:56 CST" name="beforeMethod" finished-at="2021-08-15T20:02:04 CST" duration-ms="7386" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Test_Login_Successful()[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:02:04 CST" name="Test_Login_Successful" description="Test Login Success" finished-at="2021-08-15T20:02:06 CST" duration-ms="1938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Login_Successful -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:02:06 CST" name="AfterMethod" finished-at="2021-08-15T20:02:06 CST" duration-ms="719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:02:06 CST" name="beforeMethod" finished-at="2021-08-15T20:02:12 CST" duration-ms="5022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="Test_Login_Unsuccessful()[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:02:12 CST" name="Test_Login_Unsuccessful" description="Test Login Not Success" finished-at="2021-08-15T20:02:13 CST" duration-ms="1340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Login_Unsuccessful -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:02:13 CST" name="AfterMethod" finished-at="2021-08-15T20:02:14 CST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:TestAccount@5ffc5491]" started-at="2021-08-15T20:02:14 CST" name="AfterTest" finished-at="2021-08-15T20:02:14 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+      </class> <!-- TestAccount -->
+    </test> <!-- Search Tests - Firefox -->
   </suite> <!-- Account Tests -->
 </testng-results>
