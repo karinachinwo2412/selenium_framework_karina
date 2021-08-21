@@ -1,5 +1,7 @@
 package pojo;
 
+// Plain Old Java Object
+
 public class SearchData {
     private String searchCriteria;
     private int expectedResults;
@@ -12,15 +14,12 @@ public class SearchData {
     public void setSearchCriteria(String searchCriteria){
         this.searchCriteria = searchCriteria;
     }
-
     public void setExpectedResults(int expectedResults){
         this.expectedResults = expectedResults;
     }
-
     public String getSearchCriteria(){
         return this.searchCriteria;
     }
-
     public int getExpectedResults(){
         return this.expectedResults;
     }

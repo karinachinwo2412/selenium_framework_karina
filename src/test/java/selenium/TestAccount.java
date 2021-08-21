@@ -1,16 +1,13 @@
 package selenium;
 
-import PageObjectModel.BaseClass;
 import PageObjectModel.HeaderPage;
 import PageObjectModel.LoginPage;
 import PageObjectModel.RegisterPage;
 import io.qameta.allure.Description;
-import org.openqa.selenium.*;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
 
 
 public class TestAccount extends BaseClass {

@@ -3,7 +3,7 @@ package PageObjectModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SearchResultsPage extends BaseClass {
+public class SearchResultsPage extends BasePage {
 
     private static final String ERROR_MESSAGE_NO_RESULTS_DISPLAYED = "There is no product that matches the search criteria.";
 
@@ -12,13 +12,11 @@ public class SearchResultsPage extends BaseClass {
     private By noResultsSelector = By.id("content");
 
     public SearchResultsPage(WebDriver driver){
-        super.driver = driver;
+        super(driver);
     }
-
     public int getResultsCount(){
         return driver.findElements(resultsSelector).size();
     }
-
     public boolean isNoResultsVisible(){
         return driver.findElement(noResultsSelector).getAttribute("innerHTML").contains(ERROR_MESSAGE_NO_RESULTS_DISPLAYED);
     }

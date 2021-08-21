@@ -1,32 +1,22 @@
-package PageObjectModel;
+package selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-
-/**
- * TIENE todo lo q las paginas ocupan hacer, como login, el setup del webdriver
- *
- */
-public class BaseClass {
-    protected WebDriver driver;
-
-    @BeforeTest
-    public void beforeTest(){
-        //System.out.println("*Esto corre una sola vez");
-    }
-
+public class BaseClass extends PageObjectHandler {
     @Parameters({"browser"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String browser) throws MalformedURLException, InterruptedException {
@@ -47,10 +37,6 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.get("https://demo.opencart.com/");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-    }
-    @AfterTest
-    public void AfterTest(){
-
     }
 
     @AfterMethod(alwaysRun = true)

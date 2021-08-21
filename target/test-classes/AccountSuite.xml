@@ -9,7 +9,7 @@
         </classes>
     </test>
     <test name="Search Tests - Firefox">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="firefox"/>
         <parameter name="searchCriteria" value="iphone"/>
         <parameter name="expectedResult" value="1"></parameter>
         <classes>
