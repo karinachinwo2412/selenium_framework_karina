@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.*;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 
@@ -28,7 +29,7 @@ public class BaseClass {
 
     @Parameters({"browser"})
     @BeforeMethod
-    public void beforeMethod(@Optional("chrome") String browser){
+    public void beforeMethod(@Optional("chrome") String browser) throws MalformedURLException, InterruptedException {
         switch (browser){
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
