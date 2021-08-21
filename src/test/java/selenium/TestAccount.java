@@ -61,7 +61,7 @@ public class TestAccount extends BaseClass {
         Assert.assertEquals(expectedMessage.toLowerCase(), alertMessage.getText().toLowerCase().trim());
     }
 
-   /** NO SE PUEDE CORRER 2 VECES
+   // NO SE PUEDE CORRER 2 VECES
     @Test
     public void Test_Create_New_Account(){
         //SETUP
@@ -80,5 +80,4 @@ public class TestAccount extends BaseClass {
         //VALIDATION
         Assert.assertEquals(registerPage.GetConfirmationMessage(), expectedMessage);
     }
-    */
 }

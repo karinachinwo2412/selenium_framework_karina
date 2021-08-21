@@ -29,12 +29,6 @@ public class BaseClass {
     @Parameters({"browser"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String browser){
-
-        //DesiredCapabilities caps = DesiredCapabilities.chrome();
-        //String node = "http://localhost:4444/wd/hub";
-        //driver = new RemoteWebDriver(new URL(node), caps);
-
-        //System.out.println("**Esto corre dos veces");
         switch (browser){
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -58,12 +52,12 @@ public class BaseClass {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void AfterMethod(){
         TakeScreenshot();
         driver.close();
         try {
-            driver.quit(); // EL FIREBOX NO SE OCUPA EL QUITE, XQ EL CLOSE LO CIERRA
+            driver.quit();
         } catch (WebDriverException ex){
             System.out.println("El browser ya estaba cerrado");
         }
