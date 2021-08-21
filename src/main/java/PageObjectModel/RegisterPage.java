@@ -15,7 +15,7 @@ public class RegisterPage extends BasePage {
     private By ConfirmRegisterMessageLocator = By.xpath("//div[@id='content']/h1");
     private By TermsCheckBoxLocator = By.name("agree");
     private By ContinueButtonLocator = By.xpath("//input[@value='Continue']");
-
+    private By DuplicateEmailRegisterMessageLocator = By.xpath("//*[@id=\"account-register\"]/div[1]");
 
     public RegisterPage(WebDriver _driver){
         super(_driver);
@@ -39,6 +39,10 @@ public class RegisterPage extends BasePage {
 
     public String GetConfirmationMessage(){
         return driver.findElement(ConfirmRegisterMessageLocator).getText();
+    }
+
+    public String GetEmailDuplicateMessage(){
+        return driver.findElement(DuplicateEmailRegisterMessageLocator).getText();
     }
 
 

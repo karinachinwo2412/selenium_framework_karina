@@ -3,11 +3,14 @@ package selenium;
 import PageObjectModel.HeaderPage;
 import PageObjectModel.LoginPage;
 import PageObjectModel.RegisterPage;
+import PageObjectModel.Utils;
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Random;
 
 
 public class TestAccount extends BaseClass {
@@ -58,13 +61,12 @@ public class TestAccount extends BaseClass {
         Assert.assertEquals(expectedMessage.toLowerCase(), alertMessage.getText().toLowerCase().trim());
     }
 
-   // NO SE PUEDE CORRER 2 VECES
     @Test
     public void Test_Create_New_Account(){
         //SETUP
         String firstName = "Karina";
         String lastName = "Chin Wo";
-        String email = "kari1234@chinwo.com";
+        String email = Utils.generateRandomEmail();
         String telephone = "88998899";
         String password = "1234";
         String expectedMessage = "Your Account Has Been Created!";
@@ -77,4 +79,25 @@ public class TestAccount extends BaseClass {
         //VALIDATION
         Assert.assertEquals(registerPage.GetConfirmationMessage(), expectedMessage);
     }
+
+    @Test
+    public void Test_Duplicate_Email(){
+        //SETUP
+        String firstName = "Karina";
+        String lastName = "Chin Wo";
+        String email = "kari1234@chinwo.com";
+        String telephone = "88998899";
+        String password = "1234";
+        String expectedMessage = "Warning: E-Mail Address is already registered!";
+        RegisterPage registerPage = new RegisterPage(driver);
+
+        //RUN
+        registerPage.GoTo();
+        registerPage.FillForm(firstName, lastName, email, telephone, password);
+
+        //VALIDATION
+        Assert.assertEquals(registerPage.GetEmailDuplicateMessage().trim(), expectedMessage.trim());
+    }
+
+
 }
