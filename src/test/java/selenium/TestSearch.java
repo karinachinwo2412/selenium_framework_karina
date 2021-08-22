@@ -15,8 +15,7 @@ public class TestSearch extends BaseClass {
     public void Validate_Search(@Optional("macbook") String searchCriteria, @Optional("3") String expectedResult){
         int results = Integer.parseInt(expectedResult);
 
-        WebElement searchInput = driver.findElement(By.name("search"));
-        searchInput.sendKeys(searchCriteria, Keys.ENTER);
+        this.searchResultsPage().searchProductByName(searchCriteria);
 
         Assert.assertTrue(driver.getCurrentUrl().contains("search="+searchCriteria));
 
@@ -29,8 +28,7 @@ public class TestSearch extends BaseClass {
         String searchCriteria = "Star Wars";
         int expectedResult = 0;
 
-        WebElement searchInput = driver.findElement(By.name("search"));
-        searchInput.sendKeys(searchCriteria, Keys.ENTER);
+        this.searchResultsPage().searchProductByName(searchCriteria);
 
         Assert.assertEquals(getResults(), expectedResult,
                 "Expecting " + expectedResult + " results, but got " + getResults());
@@ -42,11 +40,7 @@ public class TestSearch extends BaseClass {
 
     @Test (dataProvider = "getSearchDataFromJson", dataProviderClass = SearchProvider.class)
     public void Test_Search_WithData(SearchData testData){
-        WebElement searchInput = driver.findElement(By.name("search"));
-        searchInput.sendKeys(testData.getSearchCriteria());
-
-        driver.findElement(By.xpath("//div[@id='search']/span/button")).click();
-
+        this.searchResultsPage().searchProductByName(testData.getSearchCriteria());
         if(testData.getExpectedResults() > 0){
             Assert.assertEquals(searchResultsPage().getResultsCount(), testData.getExpectedResults());
         }

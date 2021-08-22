@@ -1,0 +1,21 @@
+{
+  "dataSet": [
+    {
+      "product": "macbook air",
+      "prices": [
+        {
+          "currency": "$",
+          "price": 1202.00
+        },
+        {
+          "currency": "€",
+          "price": 1034.60
+        },
+        {
+          "currency": "£",
+          "price": 906.69
+        }
+      ]
+    }
+  ]
+}
