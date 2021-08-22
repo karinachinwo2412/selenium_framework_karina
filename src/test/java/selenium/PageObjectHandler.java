@@ -13,6 +13,7 @@ public class PageObjectHandler {
     private HomePage homePage;
     private ProductPage productPage;
     private ShoppingCartPage shoppingCartPage;
+    //todo footer
 
     public PageObjectHandler(){}
 

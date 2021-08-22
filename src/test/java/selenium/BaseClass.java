@@ -39,6 +39,10 @@ public class BaseClass extends PageObjectHandler {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
+    public void waitDriver(int second){
+        driver.manage().timeouts().implicitlyWait(second, TimeUnit.SECONDS);
+    }
+
     @AfterMethod(alwaysRun = true)
     public void AfterMethod(){
         TakeScreenshot();

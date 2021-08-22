@@ -14,6 +14,8 @@ public class ShoppingCartPage extends BasePage{
     private By inputRowSelector = By.cssSelector("input");
     private By imageSelector = By.cssSelector("img");
     private By shoppingCartRows = By.xpath("//div[@id='content']//div[contains(@class, 'table-responsive')]//tr");
+    private By alertProductsCannotAdd = By.xpath("//*[@id=\"checkout-cart\"]/div[1]");
+    private By checkoutButton = By.xpath("//*[@id=\"content\"]/div[3]/div[2]/a");
 
     public ShoppingCartPage(WebDriver _driver){
         super(_driver);
@@ -43,5 +45,13 @@ public class ShoppingCartPage extends BasePage{
     }
     public int getAmountOfShoppingCartRows(){
         return driver.findElements(shoppingCartRows).size() - 1;
+    }
+
+    public String getCannotAddProduct(){
+       return driver.findElement(alertProductsCannotAdd).getText();
+    }
+
+    public void clickCheckoutButton(){
+        driver.findElement(checkoutButton).click();
     }
 }
