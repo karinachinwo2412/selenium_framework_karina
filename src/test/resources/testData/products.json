@@ -16,6 +16,40 @@
           "price": 906.69
         }
       ]
+    },
+    {
+      "product": "iphone",
+      "prices": [
+        {
+          "currency": "$",
+          "price": 123.20
+        },
+        {
+          "currency": "€",
+          "price": 106.04
+        },
+        {
+          "currency": "£",
+          "price": 92.93
+        }
+      ]
+    },
+    {
+      "product": "MacBook Pro",
+      "prices": [
+        {
+          "currency": "$",
+          "price": 2000.00
+        },
+        {
+          "currency": "€",
+          "price": 1721.47
+        },
+        {
+          "currency": "£",
+          "price": 1508.64
+        }
+      ]
     }
   ]
 }
